@@ -1,0 +1,78 @@
+/* Import Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* ─── UNFAZED Design Tokens ─────────────────────────────────────
+   Custom properties that define the visual identity of the app.
+   Using CSS custom properties so they can be easily changed later.
+   
+   Color palette: Calm, professional tones suitable for a therapy
+   practice management platform. Uses teal/sage greens with warm 
+   neutral accents.
+──────────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Primary — Calming teal */
+  --color-primary-50: #f0fdfa;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #14b8a6;
+  --color-primary-600: #0d9488;
+  --color-primary-700: #0f766e;
+  --color-primary-800: #115e59;
+  --color-primary-900: #134e4a;
+  --color-primary-950: #042f2e;
+
+  /* Accent — Warm amber for CTAs and highlights */
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+
+  /* Neutral — Warm grays */
+  --color-surface-50: #fafaf9;
+  --color-surface-100: #f5f5f4;
+  --color-surface-200: #e7e5e4;
+  --color-surface-300: #d6d3d1;
+  --color-surface-400: #a8a29e;
+  --color-surface-500: #78716c;
+  --color-surface-600: #57534e;
+  --color-surface-700: #44403c;
+  --color-surface-800: #292524;
+  --color-surface-900: #1c1917;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing scale */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-128: 32rem;
+}
+
+/* ─── Base Styles ──────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-surface-800);
+  background-color: var(--color-surface-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Focus Styles for Accessibility ──────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
